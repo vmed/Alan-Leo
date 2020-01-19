@@ -4,7 +4,7 @@ using HoroscopeBot.Services;
 
 namespace HoroscopeBot.Models.Commands
 {
-    public class HelloCommand : Command
+    public class StartCommand : Command
     {
         public override string CommandName { get => "/start"; set => throw new NotImplementedException(); }
 
@@ -15,7 +15,7 @@ namespace HoroscopeBot.Models.Commands
 
         public override async Task ExecuteAsync(Telegram.Bot.Types.Message message, IBotService bot)
         {           
-            await bot.Client.SendTextMessageAsync(message.Chat.Id, "тут тип гороскоп. чтобы получить гороскоп на сегодня. пиши аля  " + '\u0022' + "/овен" + '\u0022' + "," + '\u0022' + " /телец" + '\u0022' + "ну ты понел");
+            await bot.Client.SendTextMessageAsync(message.Chat.Id, "Я бот призрака Алана Лео. Я даю гороскоп на сегодняшнюю дату. Напиши мне команду, чтобы узнать гороскоп на сегодня. Например: /овен");
         }
     }
 }

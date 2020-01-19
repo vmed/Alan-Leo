@@ -22,7 +22,6 @@ namespace HoroscopeBot.Services
             {
                 return;
             }
-            Console.WriteLine(update.Message);
             var message = update.Message;
             _logger.LogInformation("Received Message from {0}: {1}", message.Chat.Id, message.Text);
 

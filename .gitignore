@@ -34,3 +34,4 @@ src/.idea
 /src/appsettings.Development.json
 /src/appsettings.json
 /src/.idea/.gitignore
+/src/Properties/PublishProfiles/AlanLeo - Web Deploy.pubxml

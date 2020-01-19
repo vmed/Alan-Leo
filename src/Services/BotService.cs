@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 using HoroscopeBot.Models;
 using HoroscopeBot.Models.Commands;
@@ -17,17 +18,21 @@ namespace HoroscopeBot.Services
         
         public TelegramBotClient Client { get; }
         
-        public Task InitAsync { get; }
+        public Task InitAsync { get; private set; }
 
         public BotService(IOptions<BotConfig> config)
         {
             _config = config.Value;
             Client = new TelegramBotClient(_config.BotToken);
 
+            commandsList.Add(new StartCommand());
+
             foreach (var sign in AstroSignsRepository.AstroSigns)
             {
                 commandsList.Add(item: new GetHoroscopeCommand(sign));
             }
+
+            InitAsync = Client.SetWebhookAsync(_config.Webhook);
         }
     }
 }

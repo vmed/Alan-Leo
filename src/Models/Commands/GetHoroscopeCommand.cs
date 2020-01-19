@@ -12,6 +12,7 @@ namespace HoroscopeBot.Models.Commands
     {
         public override string CommandName { get; set; }
         private readonly string _sign;
+        private readonly string myGazetaUrl = "http://mygazeta.com/гороскоп/";
 
         public GetHoroscopeCommand(string sign)
         {
@@ -21,36 +22,33 @@ namespace HoroscopeBot.Models.Commands
 
         public override async Task ExecuteAsync(Message message, IBotService botService)
         {
-            var url = "http://mygazeta.com/гороскоп/" + _sign + "/гороскоп-" + _sign + "-"
-                      + DateTime.Today.ToString("dd-MM-yyyy") + ".html";
+            var today = DateTime.Today.ToString("dd-MM-yyyy");
+            var url = myGazetaUrl + _sign + "/гороскоп-" 
+                + _sign + "-" + today + ".html";
 
-            Console.WriteLine(url);
-            var response = await new HttpClient().GetAsync(url);
-            string source = null;
-            var all = "";
-            var parser = new Parser();
-            var i = 0;
-            if (response != null && response.StatusCode == HttpStatusCode.OK)
-            {
-                source = await response.Content.ReadAsStringAsync();
-            }
+            using var client = new HttpClient();
+            var response = await client.GetAsync(url);
+            if (response == null || response.StatusCode != HttpStatusCode.OK) return;
 
+            var source = await response.Content.ReadAsStringAsync();
             var domParser = new HtmlParser();
             var document = await domParser.ParseDocumentAsync(source);
             var result = Parser.Parse(document);
+            string toSend = $"[{_sign}] - {today} \n";
+            var i = 0;
             foreach (var elem in result)
             {
                 i++;
                 if ((i % 2 == 0) && (i != 22) && (i < 25))
-                    all += elem;
+                    toSend += elem + "\n";
             }
 
-            await botService.Client.SendTextMessageAsync(message.Chat.Id, all);
+            await botService.Client.SendTextMessageAsync(message.Chat.Id, toSend);
         }
 
         public override bool Contains(string command)
         {
-            return (command == CommandName);
+            return (command.ToLower() == CommandName);
         }
     }
 }
