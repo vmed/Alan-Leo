@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
-using HoroscopeBot.Services;
+using HoroscopeBot.App.Services;
 
-namespace HoroscopeBot.Models.Commands
+namespace HoroscopeBot.App.Models.Commands
 {
     public class StartCommand : Command
     {

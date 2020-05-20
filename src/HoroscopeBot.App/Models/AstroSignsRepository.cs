@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace HoroscopeBot.Models
+namespace HoroscopeBot.App.Models
 {
     public static class AstroSignsRepository
     {

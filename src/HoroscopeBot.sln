@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoroscopeBot", "HoroscopeBot.csproj", "{42B6AB11-5191-46ED-B740-095AF3F351BD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoroscopeBot.App", "HoroscopeBot.App\HoroscopeBot.App.csproj", "{EC5D3210-EE50-4015-AC03-781218ACEE2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +8,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{42B6AB11-5191-46ED-B740-095AF3F351BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{42B6AB11-5191-46ED-B740-095AF3F351BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{42B6AB11-5191-46ED-B740-095AF3F351BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{42B6AB11-5191-46ED-B740-095AF3F351BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC5D3210-EE50-4015-AC03-781218ACEE2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC5D3210-EE50-4015-AC03-781218ACEE2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC5D3210-EE50-4015-AC03-781218ACEE2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC5D3210-EE50-4015-AC03-781218ACEE2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

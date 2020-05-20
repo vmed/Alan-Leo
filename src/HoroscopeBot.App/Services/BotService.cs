@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using HoroscopeBot.Models;
-using HoroscopeBot.Models.Commands;
+using HoroscopeBot.App.Models;
+using HoroscopeBot.App.Models.Commands;
 using Microsoft.Extensions.Options;
 using Telegram.Bot;
 
-namespace HoroscopeBot.Services
+namespace HoroscopeBot.App.Services
 {
     public class BotService : IBotService
     {

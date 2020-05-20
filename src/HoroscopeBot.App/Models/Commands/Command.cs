@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
-using HoroscopeBot.Services;
+using HoroscopeBot.App.Services;
 using Telegram.Bot.Types;
 
-namespace HoroscopeBot.Models.Commands
+namespace HoroscopeBot.App.Models.Commands
 {
     public abstract class Command
     {

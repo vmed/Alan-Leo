@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Telegram.Bot;
 
-namespace HoroscopeBot.Services
+namespace HoroscopeBot.App.Services
 {
     public interface IBotService
     {

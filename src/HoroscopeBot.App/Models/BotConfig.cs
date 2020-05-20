@@ -1,4 +1,4 @@
-﻿namespace HoroscopeBot.Models
+﻿namespace HoroscopeBot.App.Models
 {
     public class BotConfig
     {

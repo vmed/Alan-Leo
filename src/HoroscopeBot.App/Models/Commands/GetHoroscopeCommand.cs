@@ -3,10 +3,10 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using AngleSharp.Html.Parser;
-using HoroscopeBot.Services;
+using HoroscopeBot.App.Services;
 using Telegram.Bot.Types;
 
-namespace HoroscopeBot.Models.Commands
+namespace HoroscopeBot.App.Models.Commands
 {
     public class GetHoroscopeCommand : Command
     {

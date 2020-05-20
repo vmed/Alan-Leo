@@ -4,7 +4,7 @@ using Microsoft.Extensions.Logging;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 
-namespace HoroscopeBot.Services
+namespace HoroscopeBot.App.Services
 {
     public class MessageService : IMessageService
     {

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
-using HoroscopeBot.Services;
+using HoroscopeBot.App.Services;
 using Microsoft.AspNetCore.Mvc;
 using Telegram.Bot.Types;
 
-namespace HoroscopeBot.Controllers
+namespace HoroscopeBot.App.Controllers
 {
     [Route("api/update")]
     public class MessageController : Controller
