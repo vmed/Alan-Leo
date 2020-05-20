@@ -2,6 +2,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoroscopeBot.App", "HoroscopeBot.App\HoroscopeBot.App.csproj", "{EC5D3210-EE50-4015-AC03-781218ACEE2E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoroscopeBot.Core", "HoroscopeBot.Core\HoroscopeBot.Core.csproj", "{1B2B6A4B-BEC9-4F92-8EE7-A0C39724D9C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoroscopeBot.Integration.Tests", "HoroscopeBot.Integration.Tests\HoroscopeBot.Integration.Tests.csproj", "{A05E91B2-A6F1-4B35-AF4C-DB5CCF3C0C3D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{46F4A269-C95F-4B7C-AD98-26DEDA54CABD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +18,16 @@ Global
 		{EC5D3210-EE50-4015-AC03-781218ACEE2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC5D3210-EE50-4015-AC03-781218ACEE2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC5D3210-EE50-4015-AC03-781218ACEE2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B2B6A4B-BEC9-4F92-8EE7-A0C39724D9C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B2B6A4B-BEC9-4F92-8EE7-A0C39724D9C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B2B6A4B-BEC9-4F92-8EE7-A0C39724D9C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B2B6A4B-BEC9-4F92-8EE7-A0C39724D9C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A05E91B2-A6F1-4B35-AF4C-DB5CCF3C0C3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A05E91B2-A6F1-4B35-AF4C-DB5CCF3C0C3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A05E91B2-A6F1-4B35-AF4C-DB5CCF3C0C3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A05E91B2-A6F1-4B35-AF4C-DB5CCF3C0C3D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A05E91B2-A6F1-4B35-AF4C-DB5CCF3C0C3D} = {46F4A269-C95F-4B7C-AD98-26DEDA54CABD}
 	EndGlobalSection
 EndGlobal
